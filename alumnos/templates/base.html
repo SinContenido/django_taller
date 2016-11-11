@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}
+        Hola mundo en Django template
+    {% endblock title %}</title>
+    <link rel="stylesheet" href={% static "css/foundation.min.css" %}>
+</head>
+<body>
+    <div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Site Title</li>
+      <li>
+        <a href="#">{{nombre}}</a>
+        <ul class="menu vertical">
+          <li><a href="#">puto coco</a></li>
+          <li><a href="#">mamale al moy</a></li>
+          <li><a href="#">chupale al jairo</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+{% block contenido %}
+    
+{% endblock contenido %}
+    <script src={% static "js/vendor/jquery.js" %}></script>
+    <script src={% static "js/vendor/foundation.min.js" %}></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>

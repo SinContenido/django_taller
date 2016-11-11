@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import InfoGeneralForm
 
 
 def hola(request):
-    return HttpResponse("Hello World desde Django")
+    return render(request,"index.html",{"nombre": "Luis Hernandez"})
+
+def formulario(request):
+    form = InfoGeneralForm()
+    return render(request,"formulario.html",{"formulario":form})
 # Create your views here.
